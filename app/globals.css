@@ -1,6 +1,9 @@
 :root {
     --color-border: #424242;
-    --color-bg: #111;
+    --color-bg: #111111;
+    --color: #bbc4c4;
+    --color-input: #161616;
+    --color-white: #ffffff;
 }
 
 * {
@@ -9,12 +12,12 @@
     margin: 0;
     list-style: none;
     text-decoration: none;
+    color: var(--color);
 }
 
 body {
     position: relative;
     background: var(--color-bg);
     font-size: 1.2rem;
-    color: hsla(180, 7%, 75%, 09);
     overflow-x: hidden;
 }
