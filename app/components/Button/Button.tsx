@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 
 interface ButtonProps {
     name: string;
@@ -17,28 +16,13 @@ const Button = ({
     border,
 }: ButtonProps) => {
     return (
-        <ButtonStyled
+        <button
+            className="flex items-center gap-4 py-[0.8rem] px-[2rem] rounded-[1.875rem] border-2 border-borderColor cursor-pointer nf--transition hover:bg-borderColor hover:text-colorWhite"
             style={{ background: background, color: color, border: border }}
         >
             {icon ?? icon} {name}
-        </ButtonStyled>
+        </button>
     );
 };
-
-const ButtonStyled = styled.button`
-    padding: 0.8rem 2rem;
-    border-radius: 1.875rem;
-    border: 2px solid var(--color-border);
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    &:hover {
-        background: var(--color-border);
-        color: var(--color-white);
-    }
-`;
 
 export default Button;
