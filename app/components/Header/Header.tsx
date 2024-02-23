@@ -28,7 +28,7 @@ const Header = () => {
             {/* -----END NAVBAR----- */}
 
             {/* -----HEADER CONTENT----- */}
-            <div className="w-full min-h-[calc(90vh)] grid grid-cols-2 gap-4 items-center px-[5rem]">
+            <div className="w-full min-h-[calc(90vh)] grid grid-cols-1 md:grid-cols-2 gap-4 items-center px-2 sm:px-[5rem]">
                 <div>
                     <h1
                         className={`${abril.className} text-secondaryColor pb-[1rem] nf--liner-transition text-[clamp(2rem,5vw,4rem)]`}
@@ -58,16 +58,21 @@ const Header = () => {
                         </p>
                     </div>
 
-                    <div className="header-buttons">
+                    <div className="w-block md:flex md:justify-start md:items-center gap-4 mt-10">
                         <Button
                             name="Voir Portfolio"
                             background="#5f3918"
                             color="#ddd"
                             border="1px solid #f2994a"
                             icon={<IoMdImages />}
+                            classname="sm:min-w-[240px] w-full"
                         />
 
-                        <Button name="Nous contacter" icon={<BiMailSend />} />
+                        <Button
+                            name="Nous contacter"
+                            icon={<BiMailSend />}
+                            classname="min-w-[240px] w-full"
+                        />
                     </div>
                 </div>
 

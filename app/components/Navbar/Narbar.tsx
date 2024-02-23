@@ -9,7 +9,7 @@ import { RiAccountPinCircleFill } from "react-icons/ri";
 
 const Narbar = () => {
     return (
-        <nav className="px-[4rem] min-h-[10vh] flex justify-between items-center border-b-[1px] border-borderColor">
+        <nav className="px-[1rem] min-h-[10vh] flex justify-between items-center">
             <div className="flex items-center gap-2 cursor-pointer">
                 <Image
                     src={logo}
@@ -21,18 +21,15 @@ const Narbar = () => {
                 <h2>Logo</h2>
             </div>
 
-            <ul className="flex items-center gap-6">
-                {navLinks.map((item) => (
-                    <li
-                        key={item.id}
-                        className="nf--transition hover:scale-110"
-                    >
-                        <a href={`#${item.name}`}>{item.name}</a>
-                    </li>
-                ))}
-
-                <Button icon={<RiAccountPinCircleFill />} name="Login" />
-            </ul>
+            <Button
+                icon={<RiAccountPinCircleFill />}
+                name="Login"
+                classname="hidden sm:flex"
+            />
+            <Button
+                icon={<RiAccountPinCircleFill />}
+                classname="flex sm:hidden"
+            />
         </nav>
     );
 };
